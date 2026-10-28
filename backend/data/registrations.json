@@ -1,0 +1,43 @@
+[
+  {
+    "id": "REG-1793017313070-342",
+    "workshopId": "WS-1793012263168",
+    "workshopTitle": "Enterprise Agentic AI & Autonomous Workflows @ National Institute of Technology, Trichy",
+    "workshopCategory": "Agentic & Generative AI",
+    "workshopDates": "Next Month (Mid November)",
+    "workshopLocation": "Trichy, Tamil Nadu (ECE Seminar Hall)",
+    "workshopMode": "Offline",
+    "candidateName": "Rahul Varma",
+    "candidateEmail": "rahul@student.edu",
+    "candidateInstitution": "IIT Hyderabad",
+    "candidatePhone": "7665061289",
+    "registeredAt": "2026-10-26T12:21:53.070Z",
+    "status": "Confirmed"
+  },
+  {
+    "id": "REG-1793011786043-224",
+    "workshopId": "WS-102",
+    "workshopTitle": "Enterprise Generative AI & LLMOps Pipeline",
+    "workshopCategory": "Generative AI",
+    "workshopDates": "November 21–22, 2026",
+    "workshopLocation": "Online Live Cohort",
+    "workshopMode": "Online",
+    "candidateName": "Rahul Varma",
+    "candidateEmail": "rahul@student.edu",
+    "candidateInstitution": "IIT Hyderabad",
+    "candidatePhone": "7665061289",
+    "registeredAt": "2026-10-26T10:49:46.043Z",
+    "status": "Confirmed"
+  },
+  {
+    "id": "REG-801",
+    "workshopId": "WS-101",
+    "workshopTitle": "Autonomous AI Agents & LangGraph Deep Dive",
+    "candidateName": "Rahul Varma",
+    "candidateEmail": "rahul@student.edu",
+    "candidateInstitution": "IIT Hyderabad",
+    "candidatePhone": "9848011223",
+    "registeredAt": "2026-10-26T12:00:00Z",
+    "status": "Confirmed"
+  }
+]

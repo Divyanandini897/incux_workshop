@@ -1,0 +1,48 @@
+[
+  {
+    "id": "REQ-1793011996139",
+    "requestedBy": "Rahul Varma",
+    "email": "rahul@student.edu",
+    "phone": "7665061289",
+    "institution": "National Institute of Technology, Trichy",
+    "preferredLocation": "Trichy, Tamil Nadu (ECE Seminar Hall)",
+    "topic": "Enterprise Agentic AI & Autonomous Workflows",
+    "targetAudience": "3rd & 4th Year B.Tech CSE",
+    "estimatedStudents": 150,
+    "preferredDates": "Next Month (Mid November)",
+    "specialRequirements": "Hands-on GPU lab sessions, multi-agent frameworks, live project deployment",
+    "status": "Approved & Published",
+    "submittedAt": "2026-10-26T10:53:16.139Z",
+    "approvedAt": "2026-10-26T10:57:43.167Z"
+  },
+  {
+    "id": "REQ-501",
+    "requestedBy": "Dr. K. Srinivas",
+    "email": "srinivas@griet.ac.in",
+    "phone": "9848012345",
+    "institution": "GRIET Hyderabad",
+    "preferredLocation": "GRIET Campus, Bachupally, Hyderabad",
+    "topic": "Agentic AI with Multi-Agent Workflows",
+    "targetAudience": "3rd & 4th Year B.Tech CSE Students",
+    "estimatedStudents": 180,
+    "preferredDates": "December 22–23, 2026",
+    "specialRequirements": "Need GPU lab setup guidance, hands-on repository access, and live debugging sessions.",
+    "status": "Pending",
+    "submittedAt": "2026-10-26T10:15:00Z"
+  },
+  {
+    "id": "REQ-502",
+    "requestedBy": "Prof. Ananya Roy",
+    "email": "ananya@vignan.edu",
+    "phone": "9876543210",
+    "institution": "Vignan University, Guntur",
+    "preferredLocation": "Vignan University Main Auditorium, Vadlamudi, AP",
+    "topic": "Generative AI & LLM Deployment",
+    "targetAudience": "M.Tech & Final Year Engineering",
+    "estimatedStudents": 250,
+    "preferredDates": "January 8–9, 2027",
+    "specialRequirements": "Focus on real-world industry case studies from top enterprise companies.",
+    "status": "Pending",
+    "submittedAt": "2026-10-26T11:45:00Z"
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "id": "USR-ADMIN",
+    "role": "admin",
+    "name": "IncuxAI Administrator",
+    "email": "admin@incuxai.com",
+    "password": "admin123",
+    "institution": "IncuxAI Leadership Team"
+  },
+  {
+    "id": "USR-CAND-1",
+    "role": "candidate",
+    "name": "Rahul Varma",
+    "email": "rahul@student.edu",
+    "password": "password123",
+    "institution": "IIT Hyderabad"
+  },
+  {
+    "id": "USR-CAND-2",
+    "role": "candidate",
+    "name": "Pooja Reddy",
+    "email": "pooja@college.ac.in",
+    "password": "password123",
+    "institution": "Chalapathi Institute of Technology"
+  }
+]

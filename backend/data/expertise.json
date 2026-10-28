@@ -1,0 +1,71 @@
+{
+  "title": "Skills That Matter Beyond the Classroom",
+  "subtitle": "Curated practical curriculum tracks architected directly by working engineers and researchers.",
+  "groups": [
+    {
+      "id": "ai",
+      "index": "01",
+      "number": "01",
+      "category": "Artificial Intelligence & Emerging Technology",
+      "name": "Artificial Intelligence & Emerging Technology",
+      "description": "Frontier models, agent architectures, and autonomous decision systems built with production frameworks.",
+      "topics": [
+        "Generative AI",
+        "Agentic AI",
+        "Machine Learning",
+        "Natural Language Processing"
+      ]
+    },
+    {
+      "id": "software",
+      "index": "02",
+      "number": "02",
+      "category": "Software Development",
+      "name": "Software Development",
+      "description": "Production engineering patterns, resilient backend code, and end-to-end architectures.",
+      "topics": [
+        "Java Programming",
+        "Full-Stack Development"
+      ]
+    },
+    {
+      "id": "data",
+      "index": "03",
+      "number": "03",
+      "category": "Data & Analytics",
+      "name": "Data & Analytics",
+      "description": "Data engineering pipelines, statistical insight, and executive intelligence dashboards.",
+      "topics": [
+        "Data Science",
+        "Data Engineering",
+        "Power BI",
+        "Data Analytics"
+      ]
+    },
+    {
+      "id": "cloud-sec",
+      "index": "04",
+      "number": "04",
+      "category": "Cloud & Cybersecurity",
+      "name": "Cloud & Cybersecurity",
+      "description": "Defensive security postures, containerized workloads, and resilient cloud architectures.",
+      "topics": [
+        "Cloud Computing",
+        "Cybersecurity"
+      ]
+    },
+    {
+      "id": "professional",
+      "index": "05",
+      "number": "05",
+      "category": "Professional & Communication Skills",
+      "name": "Professional & Communication Skills",
+      "description": "Engineering communication, corporate readiness, and collaborative execution.",
+      "topics": [
+        "Soft Skills",
+        "Communication Skills",
+        "Career Readiness"
+      ]
+    }
+  ]
+}

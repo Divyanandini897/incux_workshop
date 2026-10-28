@@ -1,0 +1,16 @@
+[
+  {
+    "id": "INQ-1793003154296-446",
+    "createdAt": "2026-10-26T08:25:54.296Z",
+    "name": "Dr. Test Raman",
+    "institution": "IIT Test Campus",
+    "role": "Faculty Coordinator / Dean",
+    "email": "raman@college.edu.in",
+    "phone": "Not provided",
+    "workshopInterest": "Generative AI & Agentic Systems",
+    "estimatedStudents": "100-250 Students",
+    "mode": "Offline Campus Experience",
+    "message": "Looking forward to AI workshop in March.",
+    "status": "Received"
+  }
+]

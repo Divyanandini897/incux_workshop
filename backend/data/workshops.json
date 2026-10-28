@@ -1,0 +1,116 @@
+{
+  "cards": [
+    {
+      "id": "iit-workshops",
+      "title": "Workshops @ IIT",
+      "category": "University Workshops",
+      "location": "IIT Hyderabad",
+      "description": "High-impact technical deep-dives delivered in premier research institutions, engaging students in frontier technologies.",
+      "tag": "Premier Academic",
+      "highlight": "2 Editions Completed"
+    },
+    {
+      "id": "online-workshops",
+      "title": "Online Workshops",
+      "category": "Digital Learning",
+      "location": "Online",
+      "description": "Interactive remote cohorts with real-time code environments, expert Q&A, and project feedback across India.",
+      "tag": "Pan-India Access",
+      "highlight": "Live Coding & Labs"
+    },
+    {
+      "id": "offline-colleges",
+      "title": "Offline Workshops @ Colleges",
+      "category": "Campus Experiences",
+      "location": "Andhra Pradesh & Telangana",
+      "description": "On-ground multi-day intensive classroom experiences fostering peer collaboration and direct mentor guidance.",
+      "tag": "On-Campus Immersive",
+      "highlight": "500+ Hall Capacity"
+    },
+    {
+      "id": "guest-lectures",
+      "title": "Guest Lectures with Company Experts",
+      "category": "Industry Connect",
+      "location": "Industry-led sessions",
+      "description": "Practicing architects, research scholars, and enterprise leads sharing engineering realities and domain challenges.",
+      "tag": "Practitioner Led",
+      "highlight": "Real-world Architecture"
+    },
+    {
+      "id": "ai-bootcamps",
+      "title": "AI Bootcamps",
+      "category": "Intensive Learning",
+      "location": "University campuses",
+      "description": "Multi-day immersion programs taking engineering students from foundational models to autonomous agent deployment.",
+      "tag": "5-Day Deep Dive",
+      "highlight": "Capstone Projects"
+    }
+  ],
+  "featured": [
+    {
+      "id": "genai-iit-hyd",
+      "title": "Generative AI, IIT Hyderabad",
+      "dates": "January 3–4",
+      "participants": "200",
+      "participantsNumeric": 200,
+      "speaker": "Mohan Sir",
+      "speakerRole": "Senior Lead at Google, Hyderabad (automotive technology domain)",
+      "location": "IIT Hyderabad Campus",
+      "prominence": "featured-primary",
+      "association": null,
+      "summary": "Deep exploration of generative models, prompt engineering architectures, and automotive AI paradigms delivered to aspiring engineers."
+    },
+    {
+      "id": "agentic-iit-hyd",
+      "title": "Agentic AI, IIT Hyderabad",
+      "dates": "January 31 – February 1",
+      "participants": "150",
+      "participantsNumeric": 150,
+      "speaker": "Anvesh G",
+      "speakerRole": "PhD Scholar at IIT Hyderabad",
+      "location": "IIT Hyderabad Campus",
+      "prominence": "featured-primary",
+      "association": null,
+      "summary": "State-of-the-art architectures for autonomous agent systems, multi-agent coordination, and recursive reasoning frameworks."
+    },
+    {
+      "id": "genai-chalapathi",
+      "title": "Generative AI, Chalapathi College",
+      "dates": "March 1",
+      "participants": "500+",
+      "participantsNumeric": 500,
+      "speaker": "Dilip Sir",
+      "speakerRole": "Cybersecurity Lead at Walmart",
+      "location": "Chalapathi Institute of Technology, Guntur / AP",
+      "prominence": "featured-primary",
+      "association": "Organised in association with Jana Vignana Vedika (JVV) and Chalapathi College",
+      "summary": "Massive 500+ participant auditorium workshop covering secure generative systems, foundational AI safety, and industrial workflows."
+    },
+    {
+      "id": "agentic-vja",
+      "title": "Agentic AI, Vijayawada",
+      "dates": "Date to be confirmed",
+      "participants": "100+",
+      "participantsNumeric": 100,
+      "speaker": "Dilip Sir",
+      "speakerRole": "Cybersecurity Lead at Walmart",
+      "location": "Vijayawada, Andhra Pradesh",
+      "prominence": "standard",
+      "association": null,
+      "summary": "Regional engineering workshop focusing on practical AI agents, autonomous pipelines, and defensive security measures."
+    },
+    {
+      "id": "gitam-bootcamp",
+      "title": "Five-day AI Bootcamp, GITAM University",
+      "dates": "Date to be confirmed",
+      "participants": "300",
+      "participantsNumeric": 300,
+      "speaker": "Trainer details needed",
+      "speakerRole": "Enterprise Industry Mentors",
+      "location": "GITAM University, Hyderabad, Telangana",
+      "prominence": "standard",
+      "association": null,
+      "summary": "Five-day intensive immersive bootcamp covering end-to-end modern AI system development, hands-on lab sprints, and project reviews."
+    }
+  ]
+}

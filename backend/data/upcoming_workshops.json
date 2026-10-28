@@ -1,0 +1,73 @@
+[
+  {
+    "id": "WS-1793012263168",
+    "title": "Enterprise Agentic AI & Autonomous Workflows @ National Institute of Technology, Trichy",
+    "category": "Agentic & Generative AI",
+    "dates": "Next Month (Mid November)",
+    "location": "Trichy, Tamil Nadu (ECE Seminar Hall)",
+    "seats": 150,
+    "registered": 1,
+    "mode": "Offline",
+    "speaker": "IncuxAI Senior Practitioner Lead",
+    "description": "Hands-on GPU lab sessions, multi-agent frameworks, live project deployment",
+    "status": "Active",
+    "postedAt": "2026-10-26T10:57:43.168Z",
+    "convertedFromRequestId": "REQ-1793011996139"
+  },
+  {
+    "id": "WS-101",
+    "title": "Autonomous AI Agents & LangGraph Deep Dive",
+    "category": "Agentic AI",
+    "dates": "November 14–15, 2026",
+    "location": "IIT Hyderabad Campus",
+    "seats": 120,
+    "registered": 42,
+    "mode": "Offline",
+    "speaker": "Anvesh G (PhD Scholar, IIT Hyderabad)",
+    "description": "Two-day intensive lab building multi-agent autonomous decision pipelines, human-in-the-loop triggers, and memory storage.",
+    "status": "Active",
+    "postedAt": "2026-10-26T09:00:00Z"
+  },
+  {
+    "id": "WS-102",
+    "title": "Enterprise Generative AI & LLMOps Pipeline",
+    "category": "Generative AI",
+    "dates": "November 21–22, 2026",
+    "location": "Online Live Cohort",
+    "seats": 250,
+    "registered": 99,
+    "mode": "Online",
+    "speaker": "Mohan Sir (Senior Lead at Google)",
+    "description": "Building fine-tuned SLMs, vector database retrieval architectures, and real-time inference monitoring for production.",
+    "status": "Active",
+    "postedAt": "2026-10-26T09:30:00Z"
+  },
+  {
+    "id": "WS-103",
+    "title": "Defensive Cloud Security & Zero-Trust Engineering",
+    "category": "Cloud & Cybersecurity",
+    "dates": "December 5–6, 2026",
+    "location": "Vijayawada Regional Tech Auditorium",
+    "seats": 150,
+    "registered": 64,
+    "mode": "Offline",
+    "speaker": "Dilip Sir (Cybersecurity Lead, Walmart)",
+    "description": "Practical containment labs, cloud credential auditing, Kubernetes network policies, and identity federation architectures.",
+    "status": "Active",
+    "postedAt": "2026-10-26T10:00:00Z"
+  },
+  {
+    "id": "WS-104",
+    "title": "5-Day Full-Stack AI System Bootcamp",
+    "category": "AI Bootcamps",
+    "dates": "December 14–18, 2026",
+    "location": "GITAM University, Hyderabad Campus",
+    "seats": 300,
+    "registered": 115,
+    "mode": "Offline",
+    "speaker": "Enterprise Industry Mentors",
+    "description": "End-to-end full stack architecture integrating fast AI backends, streaming UI components, and containerized deployment.",
+    "status": "Active",
+    "postedAt": "2026-10-26T10:30:00Z"
+  }
+]

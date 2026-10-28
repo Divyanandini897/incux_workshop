@@ -1,0 +1,35 @@
+{
+  "title": "Impact Measured in Experiences",
+  "subtitle": "Verified reach across collegiate workshops and technical immersions.",
+  "footnote": "Attendance figure represents 950+ aggregate workshop participations (200 + 150 + 500 + 100) across campus sessions. It reflects verified session attendances rather than unique individuals.",
+  "stats": [
+    {
+      "id": "participations",
+      "value": 950,
+      "suffix": "+",
+      "label": "Student Participations",
+      "subtext": "Verified attendance across reported college sessions"
+    },
+    {
+      "id": "reported-workshops",
+      "value": 4,
+      "suffix": "",
+      "label": "Workshops with Reported Attendance",
+      "subtext": "IIT Hyderabad (2), Chalapathi College, Vijayawada"
+    },
+    {
+      "id": "states-reached",
+      "value": 2,
+      "suffix": "",
+      "label": "States Reached",
+      "subtext": "Andhra Pradesh & Telangana academic hubs"
+    },
+    {
+      "id": "bootcamp-duration",
+      "value": 5,
+      "suffix": "-Day",
+      "label": "Bootcamp at GITAM",
+      "subtext": "Intensive hands-on AI curriculum at Hyderabad campus"
+    }
+  ]
+}

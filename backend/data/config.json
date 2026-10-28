@@ -1,0 +1,47 @@
+{
+  "brand": {
+    "name": "IncuxAI",
+    "wordmark": "INCUXAI",
+    "tagline": "Workshops that turn knowledge into real-world skills.",
+    "mission": "IncuxAI organises online and offline workshops with colleges, universities, researchers and industry professionals. Its mission is to bridge academic knowledge and industry requirements through practical, expert-led learning."
+  },
+  "contact": {
+    "email": "info@incuxai.com",
+    "phone": "+91 7665061289",
+    "location": "Hyderabad & Regional Centers, India",
+    "note": "Official direct institutional inquiry channels. Reach out to coordinate campus workshops or enterprise guest lectures."
+  },
+  "socials": [],
+  "newsPlaceholder": {
+    "title": "News & Dispatches",
+    "status": "Upcoming Announcements",
+    "notice": "We do not publish fabricated announcements. As upcoming workshop cohorts, research fellowships, and institutional memorandums are officially ratified, they will be posted here.",
+    "items": []
+  },
+  "howWeWork": [
+    {
+      "step": "01",
+      "title": "Understand",
+      "tag": "Diagnostic & Alignment",
+      "summary": "We consult with academic deans and department heads to map syllabus requirements against industry skill benchmarks."
+    },
+    {
+      "step": "02",
+      "title": "Design",
+      "tag": "Curriculum Architecture",
+      "summary": "Practicing architects design project-driven modules, code repositories, and real-time interactive problem sets."
+    },
+    {
+      "step": "03",
+      "title": "Deliver",
+      "tag": "Expert Execution",
+      "summary": "Live, immersive offline campus sessions or interactive digital cohorts taught directly by tech leaders."
+    },
+    {
+      "step": "04",
+      "title": "Extend the Impact",
+      "tag": "Sustained Mastery",
+      "summary": "Post-session capstones, code assessments, and guided pathways keep students learning far beyond the workshop hall."
+    }
+  ]
+}

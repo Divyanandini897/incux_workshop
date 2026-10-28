@@ -1,0 +1,14 @@
+{
+  "sectionTitle": "Learning Connected to Industry",
+  "disclaimer": "The professional backgrounds and domain experience represented by our workshop leaders, trainers, and advisors. Listed strictly to reflect industry practitioner background, not corporate sponsorship or endorsement.",
+  "companies": [
+    { "name": "Google", "tagline": "Senior Technical Leadership", "highlight": "Automotive & Generative AI" },
+    { "name": "Walmart", "tagline": "Security & Architecture", "highlight": "Cybersecurity & Systems" },
+    { "name": "Microsoft", "tagline": "Cloud & Intelligence", "highlight": "Enterprise Software" },
+    { "name": "Deloitte", "tagline": "Strategy & Analytics", "highlight": "Data Transformation" },
+    { "name": "TCS", "tagline": "Enterprise Engineering", "highlight": "Scalable Systems" },
+    { "name": "Genpact", "tagline": "AI & Process Analytics", "highlight": "Operational Intelligence" },
+    { "name": "Johnson & Johnson", "tagline": "Healthcare Tech & Data", "highlight": "Mission-Critical Systems" },
+    { "name": "Tech Mahindra", "tagline": "Next-Gen Solutions", "highlight": "Network & Cloud Engineering" }
+  ]
+}
