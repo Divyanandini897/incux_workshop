@@ -83,18 +83,18 @@ export default function IntroAnimation({ onComplete }) {
             scale: 1.04,
             transition: { duration: 0.7, ease: [0.43, 0.13, 0.23, 0.96] }
           }}
-          className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-[#050814] text-white overflow-hidden select-none"
+          className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-[#140303] text-[#F7F1E6] overflow-hidden select-none"
           aria-live="polite"
         >
-          {/* Ambient Cyber Grid & Glow Orbs */}
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_40%,rgba(6,182,212,0.15)_0%,rgba(5,8,20,0.95)_75%)] pointer-events-none" />
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-cyan-500/10 blur-[140px] pointer-events-none animate-pulse-slow" />
+          {/* Ambient Burgundy Glow Orbs */}
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_40%,rgba(89,9,7,0.55)_0%,rgba(20,3,3,0.98)_75%)] pointer-events-none" />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-[#590907]/30 blur-[140px] pointer-events-none animate-pulse-slow" />
 
-          {/* Futuristic corner brackets */}
-          <div className="absolute top-8 left-8 w-8 h-8 border-t-2 border-l-2 border-cyan-500/40" />
-          <div className="absolute top-8 right-8 w-8 h-8 border-t-2 border-r-2 border-cyan-500/40" />
-          <div className="absolute bottom-8 left-8 w-8 h-8 border-b-2 border-l-2 border-cyan-500/40" />
-          <div className="absolute bottom-8 right-8 w-8 h-8 border-b-2 border-r-2 border-cyan-500/40" />
+          {/* Elegant corner brackets in Warm Cream Beige */}
+          <div className="absolute top-8 left-8 w-8 h-8 border-t-2 border-l-2 border-[#E8D2B5]/40" />
+          <div className="absolute top-8 right-8 w-8 h-8 border-t-2 border-r-2 border-[#E8D2B5]/40" />
+          <div className="absolute bottom-8 left-8 w-8 h-8 border-b-2 border-l-2 border-[#E8D2B5]/40" />
+          <div className="absolute bottom-8 right-8 w-8 h-8 border-b-2 border-r-2 border-[#E8D2B5]/40" />
 
           <motion.div
             variants={containerVariants}
@@ -106,14 +106,14 @@ export default function IntroAnimation({ onComplete }) {
             {/* Top Eyebrow Badge */}
             <motion.div
               variants={wordVariants}
-              className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-navy-900/80 backdrop-blur-md border border-cyan-500/30 text-xs uppercase tracking-widest text-cyan-300 font-mono mb-8 shadow-glow-cyan"
+              className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-[#250a09]/80 backdrop-blur-md border border-[#E8D2B5]/30 text-xs uppercase tracking-widest text-[#E8D2B5] font-mono mb-8 shadow-glow-burgundy"
             >
-              <span className="w-2 h-2 rounded-full bg-cyan-400 animate-ping" />
+              <span className="w-2 h-2 rounded-full bg-[#E8D2B5]" />
               <span>INCUXAI IMMERSIVE LEARNING</span>
             </motion.div>
 
             {/* Word-by-Word & Character-by-Character Main Title */}
-            <h1 className="font-headline text-4xl sm:text-6xl md:text-8xl font-black tracking-tight leading-[1.05] text-white">
+            <h1 className="font-headline text-4xl sm:text-6xl md:text-8xl font-black tracking-tight leading-[1.05] text-[#F7F1E6]">
               <span className="inline-flex flex-wrap justify-center gap-x-4 sm:gap-x-6">
                 {line1Words.map((word, idx) => (
                   <motion.span key={idx} variants={wordVariants} className="inline-block">
@@ -122,7 +122,7 @@ export default function IntroAnimation({ onComplete }) {
                 ))}
               </span>
               <br />
-              <span className="inline-flex justify-center text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-electric-400 to-accent-lime drop-shadow-[0_0_35px_rgba(6,182,212,0.4)]">
+              <span className="inline-flex justify-center text-transparent bg-clip-text bg-gradient-to-r from-[#E8D2B5] via-[#d4bea0] to-[#A5A79B] drop-shadow-[0_0_35px_rgba(232,210,181,0.35)]">
                 {brandWord.split("").map((char, i) => (
                   <motion.span
                     key={i}
@@ -139,23 +139,23 @@ export default function IntroAnimation({ onComplete }) {
             {/* Subtext reveal */}
             <motion.p
               variants={wordVariants}
-              className="mt-6 sm:mt-8 text-sm sm:text-lg text-neutral-300 max-w-xl mx-auto font-light leading-relaxed tracking-wide"
+              className="mt-6 sm:mt-8 text-sm sm:text-lg text-[#A5A79B] max-w-xl mx-auto font-light leading-relaxed tracking-wide"
             >
               Bridging academic depth with production engineering realities.
             </motion.p>
 
-            {/* Animated Cyber Progress Scanner */}
+            {/* Animated Progress Scanner */}
             <motion.div
               initial={{ width: 0, opacity: 0 }}
               animate={{ width: "240px", opacity: 1 }}
               transition={{ delay: 0.4, duration: 1.8, ease: "easeInOut" }}
-              className="h-1 bg-navy-800 rounded-full mt-10 overflow-hidden relative"
+              className="h-1 bg-[#250a09] rounded-full mt-10 overflow-hidden relative"
             >
               <motion.div
                 initial={{ x: "-100%" }}
                 animate={{ x: "100%" }}
                 transition={{ repeat: Infinity, duration: 1.2, ease: "linear" }}
-                className="w-1/2 h-full bg-gradient-to-r from-transparent via-cyan-400 to-transparent"
+                className="w-1/2 h-full bg-gradient-to-r from-transparent via-[#E8D2B5] to-transparent"
               />
             </motion.div>
           </motion.div>
@@ -163,7 +163,7 @@ export default function IntroAnimation({ onComplete }) {
           {/* Skip Button */}
           <button
             onClick={handleComplete}
-            className="absolute bottom-8 right-8 text-xs font-mono uppercase tracking-wider text-neutral-400 hover:text-cyan-300 transition-colors px-4 py-2 rounded-full border border-white/10 hover:border-cyan-500/50 bg-navy-900/60 backdrop-blur-md cursor-pointer"
+            className="absolute bottom-8 right-8 text-xs font-mono uppercase tracking-wider text-[#A5A79B] hover:text-[#E8D2B5] transition-colors px-4 py-2 rounded-full border border-[#A5A79B]/30 hover:border-[#E8D2B5]/50 bg-[#250a09]/60 backdrop-blur-md cursor-pointer"
           >
             Skip [ESC]
           </button>

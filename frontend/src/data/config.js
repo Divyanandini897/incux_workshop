@@ -23,10 +23,10 @@ export const siteConfig = {
   },
   newsPlaceholder: {
     title: "News & Dispatches",
-    subtitle: "Verified Announcements Only",
+    subtitle: "Official Announcements Only",
     badge: "Official Notice",
     statusMessage: "Upcoming announcements & dispatches will appear here.",
-    clarification: "In strict accordance with our data accuracy charter, we do not publish synthetic or unverified press releases. Once new dates, research partnerships, and college MoUs are finalized, they will be announced here directly."
+    clarification: "In strict accordance with our data accuracy charter, we do not publish synthetic press releases. Once new dates, research partnerships, and college MoUs are finalized, they will be announced here directly."
   },
   howWeWork: {
     headline: "From Collaboration to Practical Learning",

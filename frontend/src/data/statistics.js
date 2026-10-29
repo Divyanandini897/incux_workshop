@@ -1,14 +1,14 @@
 export const impactStatsData = {
   headline: "Impact Measured in Experiences",
-  subtitle: "Direct metrics verified through collegiate and institutional workshop sessions.",
-  footnote: "Note: '950+ Student Participations' counts cumulative verified session participations (200 + 150 + 500 + 100) across 4 campus sessions, not unique students. The GITAM bootcamp attendance is reported separately and not added to this total.",
+  subtitle: "Direct metrics recorded through collegiate and institutional workshop sessions.",
+  footnote: "Note: '950+ Student Participations' counts cumulative session participations (200 + 150 + 500 + 100) across 4 campus sessions, not unique students. The GITAM bootcamp attendance is reported separately and not added to this total.",
   stats: [
     {
       id: "participations",
       value: 950,
       suffix: "+",
       label: "Student Participations",
-      caption: "Cumulative verified attendances across campus sessions"
+      caption: "Cumulative attendances across campus sessions"
     },
     {
       id: "workshops-reported",

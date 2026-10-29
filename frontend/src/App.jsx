@@ -12,7 +12,6 @@ import Expertise from './components/Expertise';
 import HowWeWork from './components/HowWeWork';
 import About from './components/About';
 import ReviewsSection from './components/ReviewsSection';
-import ContactCTA from './components/ContactCTA';
 import Footer from './components/Footer';
 import FloatingConnectWidget from './components/FloatingConnectWidget';
 
@@ -105,7 +104,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-[#faf9f5] dark:bg-navy-950 text-neutral-900 dark:text-neutral-100 selection:bg-cyan-400 selection:text-navy-950 transition-colors duration-200">
+    <div className="min-h-screen bg-[#FAF6F0] dark:bg-[#140303] text-[#1C0707] dark:text-[#F7F1E6] selection:bg-[#E8D2B5] selection:text-[#590907] transition-colors duration-200">
       {/* 1. Intro Animation (Plays once per page load, character/word reveal, 2-3s) */}
       {!introFinished && (
         <IntroAnimation onComplete={() => setIntroFinished(true)} />
@@ -149,6 +148,9 @@ export default function App() {
         {/* Section 2: Hero */}
         <Hero />
 
+        {/* Section: Bridging Education & Industry (Directly below landing page) */}
+        <About />
+
         {/* Section 3: Our Work ("Where Ideas Become Experience" with fluid horizontal scrolling) */}
         <OurWork cards={cards} />
 
@@ -176,12 +178,6 @@ export default function App() {
 
         {/* Creative Scrolling Student Reviews Section */}
         <ReviewsSection />
-
-        {/* Section 9: About IncuxAI (Bridging Education & Industry) */}
-        <About />
-
-        {/* Section 10: Collaboration CTA (Let's Create the Next Learning Experience) */}
-        <ContactCTA />
       </main>
 
       {/* Section 11: Footer (With giant subtle incuxai watermark) */}

@@ -59,14 +59,14 @@ export default function AiInteractiveLab({ onOpenAuth, onOpenPortal, currentUser
         `Query: "${ragQuery}"`,
         "✓ Vector similarity search: cosine distance 0.942 against 150 campus PDF embeddings.",
         "✓ Context window assembled: 3 top chunks injected into prompt.",
-        "✓ Synthesizing verified answer with production citation links."
+        "✓ Synthesizing accurate answer with production citation links."
       ]);
     } else {
       setTerminalLogs([
         "$ incuxai-sec --scan --cluster=prod-aws-eu",
         "● Ingress controller audit: 0 public ports exposed.",
         "✓ mTLS mutual TLS cryptographic certificates validated.",
-        "✓ Zero-trust security policy verified across all 18 microservice pods."
+        "✓ Zero-trust security policy enforced across all 18 microservice pods."
       ]);
     }
   }, [activeTab]);
@@ -103,10 +103,7 @@ export default function AiInteractiveLab({ onOpenAuth, onOpenPortal, currentUser
 
           {/* Quick Sandbox Status Indicator */}
           <div className="flex items-center gap-3 bg-white/90 dark:bg-navy-900/90 backdrop-blur-md p-3 rounded-2xl border border-neutral-200 dark:border-white/10 shadow-md font-mono text-xs">
-            <span className="relative flex h-3 w-3">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-3 w-3 bg-cyan-500"></span>
-            </span>
+            <span className="w-3 h-3 rounded-full bg-cyan-500"></span>
             <span className="text-neutral-700 dark:text-cyan-200 font-bold">Lab Sandbox Active</span>
             <span className="text-neutral-400">|</span>
             <span className="text-neutral-500 dark:text-neutral-400">Node v22 • Python 3.12</span>
@@ -235,7 +232,7 @@ export default function AiInteractiveLab({ onOpenAuth, onOpenPortal, currentUser
                             {isPassed ? (
                               <CheckCircle2 className="w-5 h-5 text-cyan-500 dark:text-cyan-400" />
                             ) : isCurrent ? (
-                              <span className="w-2.5 h-2.5 rounded-full bg-cyan-500 animate-ping inline-block" />
+                              <span className="w-2.5 h-2.5 rounded-full bg-cyan-500 inline-block" />
                             ) : (
                               <span className="w-2.5 h-2.5 rounded-full bg-neutral-300 dark:bg-neutral-700 inline-block" />
                             )}

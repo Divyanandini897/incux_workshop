@@ -1,14 +1,14 @@
 {
   "title": "Impact Measured in Experiences",
-  "subtitle": "Verified reach across collegiate workshops and technical immersions.",
-  "footnote": "Attendance figure represents 950+ aggregate workshop participations (200 + 150 + 500 + 100) across campus sessions. It reflects verified session attendances rather than unique individuals.",
+  "subtitle": "Direct reach across collegiate workshops and technical immersions.",
+  "footnote": "Attendance figure represents 950+ aggregate workshop participations (200 + 150 + 500 + 100) across campus sessions. It reflects recorded session attendances rather than unique individuals.",
   "stats": [
     {
       "id": "participations",
       "value": 950,
       "suffix": "+",
       "label": "Student Participations",
-      "subtext": "Verified attendance across reported college sessions"
+      "subtext": "Recorded attendance across reported college sessions"
     },
     {
       "id": "reported-workshops",

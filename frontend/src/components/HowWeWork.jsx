@@ -31,14 +31,13 @@ export default function HowWeWork() {
     setActiveStepIdx((prev) => (prev - 1 + totalSteps) % totalSteps);
   };
 
-  // Optional auto-rotation
+  // Auto-rotate the cards step by step for every 3 seconds
   useEffect(() => {
-    if (!isAutoTurning) return;
     const interval = setInterval(() => {
-      nextStep();
-    }, 4500);
+      setActiveStepIdx((prev) => (prev + 1) % totalSteps);
+    }, 3000);
     return () => clearInterval(interval);
-  }, [isAutoTurning]);
+  }, [totalSteps]);
 
   // Keyboard navigation
   useEffect(() => {
@@ -58,41 +57,41 @@ export default function HowWeWork() {
     <section
       id="how-we-work"
       ref={sectionRef}
-      className="relative w-full bg-[#f8f7f2] dark:bg-[#070b1a] py-24 sm:py-32 border-t border-neutral-300 dark:border-white/15 overflow-hidden transition-colors duration-200 select-none"
+      className="relative w-full bg-[#FAF6F0] dark:bg-[#140303] py-24 sm:py-32 border-t border-[#A5A79B]/30 dark:border-[#590907]/40 overflow-hidden transition-colors duration-200 select-none"
       aria-label="How We Work"
     >
       {/* Background ambient lighting */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-blue-500/10 dark:bg-cyan-500/15 blur-[150px] pointer-events-none rounded-full" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-[#590907]/10 dark:bg-[#E8D2B5]/10 blur-[150px] pointer-events-none rounded-full" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12 sm:mb-16">
           <div className="max-w-3xl">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50 dark:bg-blue-950/80 border border-blue-400/40 text-xs font-mono text-blue-700 dark:text-cyan-300 uppercase tracking-widest mb-4 font-bold shadow-xs">
-              <span className="w-2 h-2 rounded-full bg-blue-500 dark:bg-cyan-400 animate-ping" />
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#E8D2B5]/30 dark:bg-[#590907]/40 border border-[#590907]/20 dark:border-[#E8D2B5]/30 text-xs font-mono text-[#590907] dark:text-[#E8D2B5] uppercase tracking-widest mb-4 font-bold shadow-xs">
+              <span className="w-2 h-2 rounded-full bg-[#590907] dark:bg-[#E8D2B5]" />
               <span>Section 08 // Operational Delivery</span>
             </div>
-            <h2 className="font-headline font-extrabold text-3xl sm:text-5xl md:text-6xl text-neutral-950 dark:text-white tracking-tight leading-tight">
+            <h2 className="font-headline font-extrabold text-3xl sm:text-5xl md:text-6xl text-neutral-950 dark:text-[#FAF6F0] tracking-tight leading-tight">
               From Collaboration to <br className="hidden sm:inline" />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-cyan-500 to-blue-400 dark:from-cyan-400 dark:via-blue-400 dark:to-cyan-300 drop-shadow-sm">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#590907] via-[#851614] to-[#590907] dark:from-[#E8D2B5] dark:via-white dark:to-[#E8D2B5] drop-shadow-sm">
                 Practical Learning
               </span>
             </h2>
-            <p className="mt-4 text-base sm:text-lg text-neutral-700 dark:text-neutral-200 font-medium leading-relaxed">
+            <p className="mt-4 text-base sm:text-lg text-neutral-700 dark:text-neutral-300 font-medium leading-relaxed">
               {subtitle}
             </p>
           </div>
 
           {/* Step Selector Dial Tabs */}
-          <div className="flex flex-wrap items-center gap-2 p-1.5 rounded-2xl bg-white dark:bg-[#0c1228] border border-neutral-300 dark:border-white/15 shadow-sm">
+          <div className="flex flex-wrap items-center gap-2 p-1.5 rounded-2xl bg-white dark:bg-[#200807] border border-[#A5A79B]/30 dark:border-[#590907]/40 shadow-sm">
             {steps.map((step, idx) => (
               <button
                 key={`tab-${step.step}`}
                 onClick={() => setActiveStepIdx(idx)}
                 className={`px-3.5 py-2 rounded-xl text-xs font-mono font-bold transition-all cursor-pointer ${
                   activeStepIdx === idx
-                    ? 'bg-gradient-to-r from-blue-600 to-cyan-500 text-white shadow-md shadow-blue-500/25 scale-105'
-                    : 'text-neutral-700 dark:text-neutral-300 hover:text-neutral-950 dark:hover:text-white hover:bg-neutral-100 dark:hover:bg-white/5'
+                    ? 'bg-gradient-to-r from-[#590907] to-[#7a1210] dark:from-[#590907] dark:to-[#3a0605] text-[#FAF6F0] shadow-md shadow-[#590907]/25 scale-105'
+                    : 'text-neutral-700 dark:text-[#FAF6F0] hover:text-[#590907] dark:hover:text-[#E8D2B5] hover:bg-[#FAF6F0] dark:hover:bg-[#140303]'
                 }`}
               >
                 {step.step} {step.tag.split(' ')[0]}
@@ -105,10 +104,10 @@ export default function HowWeWork() {
         <div className="relative w-full max-w-5xl mx-auto min-h-[540px] flex flex-col items-center justify-center [perspective:1800px] my-6">
           
           {/* Circular Orbit Ring in the center */}
-          <div className="absolute w-[440px] sm:w-[560px] h-[440px] sm:h-[560px] rounded-full border border-blue-500/20 dark:border-cyan-500/20 pointer-events-none flex items-center justify-center">
-            {/* Pulsing center hub */}
-            <div className="w-20 h-20 rounded-full bg-blue-500/5 dark:bg-cyan-500/10 border border-blue-500/30 dark:border-cyan-500/30 flex items-center justify-center">
-              <div className="w-8 h-8 rounded-full bg-gradient-to-tr from-blue-600 to-cyan-400 animate-pulse" />
+          <div className="absolute w-[440px] sm:w-[560px] h-[440px] sm:h-[560px] rounded-full border border-[#590907]/20 dark:border-[#E8D2B5]/20 pointer-events-none flex items-center justify-center">
+            {/* Center hub */}
+            <div className="w-20 h-20 rounded-full bg-[#590907]/5 dark:bg-[#E8D2B5]/5 border border-[#590907]/30 dark:border-[#E8D2B5]/30 flex items-center justify-center">
+              <div className="w-8 h-8 rounded-full bg-gradient-to-tr from-[#590907] to-[#851614] dark:from-[#E8D2B5] dark:to-[#FAF6F0] shadow-sm" />
             </div>
             
             {/* 4 Orbital Node Markers on the Circle */}
@@ -124,8 +123,8 @@ export default function HowWeWork() {
                   style={{ transform: `translate(${nx}px, ${ny}px)` }}
                   className={`absolute w-4 h-4 rounded-full border-2 transition-all duration-500 flex items-center justify-center ${
                     isCurrent
-                      ? 'bg-blue-600 dark:bg-cyan-400 border-white dark:border-navy-950 scale-150 shadow-glow-cyan'
-                      : 'bg-neutral-300 dark:bg-navy-800 border-white dark:border-navy-950'
+                      ? 'bg-[#590907] dark:bg-[#E8D2B5] border-white dark:border-[#140303] scale-150 shadow-glow-burgundy dark:shadow-glow-cream'
+                      : 'bg-[#A5A79B]/40 dark:bg-[#590907]/40 border-white dark:border-[#140303]'
                   }`}
                 />
               );
@@ -206,13 +205,13 @@ export default function HowWeWork() {
                   className="w-[320px] sm:w-[380px] md:w-[420px] cursor-pointer"
                 >
                   <div
-                    className={`process-step-card flex flex-col justify-between p-8 rounded-3xl bg-white dark:bg-[#0c1228] border transition-all duration-300 shadow-2xl relative overflow-hidden min-h-[360px] ${
+                    className={`process-step-card flex flex-col justify-between p-8 rounded-3xl bg-white dark:bg-[#200807] border transition-all duration-300 shadow-2xl relative overflow-hidden min-h-[360px] ${
                       isCurrent
-                        ? 'border-blue-500/80 dark:border-cyan-400 ring-4 ring-blue-500/20 dark:ring-cyan-400/25 shadow-glow-cyan'
-                        : 'border-neutral-300 dark:border-white/15 hover:border-blue-500/50'
+                        ? 'border-[#590907] dark:border-[#E8D2B5] ring-4 ring-[#590907]/20 dark:ring-[#E8D2B5]/25 shadow-glow-burgundy dark:shadow-glow-cream'
+                        : 'border-[#A5A79B]/30 dark:border-[#590907]/40 hover:border-[#590907] dark:hover:border-[#E8D2B5]'
                     }`}
                   >
-                    <div className="absolute top-0 right-0 w-32 h-32 bg-blue-500/10 dark:bg-cyan-500/10 rounded-full blur-xl pointer-events-none" />
+                    <div className="absolute top-0 right-0 w-32 h-32 bg-[#590907]/10 dark:bg-[#E8D2B5]/10 rounded-full blur-xl pointer-events-none" />
 
                     <div>
                       {/* Step Header */}
@@ -220,7 +219,7 @@ export default function HowWeWork() {
                         <span
                           className={`font-bold text-3xl font-headline transition-colors ${
                             isCurrent
-                              ? 'text-blue-600 dark:text-cyan-400 font-black'
+                              ? 'text-[#590907] dark:text-[#E8D2B5] font-black'
                               : 'text-neutral-500 dark:text-neutral-400'
                           }`}
                         >
@@ -229,19 +228,19 @@ export default function HowWeWork() {
                         <div
                           className={`w-12 h-12 rounded-2xl border flex items-center justify-center transition-all ${
                             isCurrent
-                              ? 'bg-blue-600/20 dark:bg-cyan-500/20 border-blue-500/50 dark:border-cyan-400/50 text-blue-600 dark:text-cyan-400 scale-110 shadow-glow-cyan'
-                              : 'bg-neutral-100 dark:bg-white/5 border-neutral-300 dark:border-white/10 text-neutral-800 dark:text-neutral-200'
+                              ? 'bg-[#590907]/20 dark:bg-[#E8D2B5]/20 border-[#590907]/50 dark:border-[#E8D2B5]/50 text-[#590907] dark:text-[#E8D2B5] scale-110 shadow-glow-burgundy'
+                              : 'bg-[#FAF6F0] dark:bg-[#140303] border-[#A5A79B]/30 dark:border-[#590907]/30 text-neutral-800 dark:text-neutral-200'
                           }`}
                         >
                           <Icon className="w-6 h-6" />
                         </div>
                       </div>
 
-                      <span className="text-xs font-mono text-blue-700 dark:text-cyan-300 uppercase tracking-widest block mb-2 font-bold bg-blue-50 dark:bg-blue-950/80 px-2.5 py-1 rounded-md border border-blue-400/20 w-fit">
+                      <span className="text-xs font-mono text-[#590907] dark:text-[#E8D2B5] uppercase tracking-widest block mb-2 font-bold bg-[#E8D2B5]/30 dark:bg-[#590907]/40 px-2.5 py-1 rounded-md border border-[#590907]/20 dark:border-[#E8D2B5]/20 w-fit">
                         {step.tag}
                       </span>
 
-                      <h3 className="font-headline font-extrabold text-2xl sm:text-3xl text-neutral-950 dark:text-white mt-3">
+                      <h3 className="font-headline font-extrabold text-2xl sm:text-3xl text-neutral-950 dark:text-[#FAF6F0] mt-3">
                         {step.title}
                       </h3>
 
@@ -253,20 +252,20 @@ export default function HowWeWork() {
                     <div
                       className={`relative z-10 pt-5 mt-6 border-t flex items-center justify-between text-xs font-mono font-bold transition-colors ${
                         isCurrent
-                          ? 'border-blue-200 dark:border-cyan-500/30 text-blue-600 dark:text-cyan-400'
-                          : 'border-neutral-200 dark:border-white/10 text-neutral-600 dark:text-neutral-400'
+                          ? 'border-[#590907]/20 dark:border-[#E8D2B5]/20 text-[#590907] dark:text-[#E8D2B5]'
+                          : 'border-[#A5A79B]/20 dark:border-[#590907]/20 text-neutral-600 dark:text-neutral-400'
                       }`}
                     >
                       <span className="flex items-center gap-1.5">
-                        {isCurrent && <CheckCircle2 className="w-4 h-4 text-blue-500 dark:text-cyan-400 animate-pulse" />}
+                        {isCurrent && <CheckCircle2 className="w-4 h-4 text-[#590907] dark:text-[#E8D2B5]" />}
                         <span>Step {step.step} of 04</span>
                       </span>
                       {isCurrent ? (
-                        <span className="text-[11px] font-mono text-blue-600 dark:text-cyan-400 uppercase tracking-wider">
+                        <span className="text-[11px] font-mono text-[#590907] dark:text-[#E8D2B5] uppercase tracking-wider">
                           Active Phase ●
                         </span>
                       ) : (
-                        <span className="text-[11px] text-neutral-400">Click to Turn ⤵</span>
+                        <span className="text-[11px] text-neutral-400 font-mono">Stage 0{step.step}</span>
                       )}
                     </div>
                   </div>
@@ -274,41 +273,6 @@ export default function HowWeWork() {
               );
             })}
           </div>
-
-          {/* Circular Turning Navigation Controls */}
-          <div className="flex items-center gap-4 mt-6 z-30">
-            <button
-              onClick={prevStep}
-              className="flex items-center gap-2 px-5 py-3 rounded-full bg-white dark:bg-white/10 hover:bg-neutral-100 dark:hover:bg-white/20 text-neutral-900 dark:text-white font-mono text-xs font-bold border border-neutral-300 dark:border-white/15 transition-all shadow-md active:scale-95 cursor-pointer"
-            >
-              <RotateCcw className="w-4 h-4" />
-              <span>Turn Previous Step</span>
-            </button>
-
-            <button
-              onClick={nextStep}
-              className="flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-500 hover:to-cyan-400 text-white font-mono text-xs font-bold border border-blue-400/30 transition-all shadow-lg shadow-blue-500/25 active:scale-95 cursor-pointer"
-            >
-              <span>Turn Next Step</span>
-              <RotateCw className="w-4 h-4" />
-            </button>
-
-            <button
-              onClick={() => setIsAutoTurning(!isAutoTurning)}
-              className={`px-4 py-3 rounded-full border text-xs font-mono font-medium transition-all ${
-                isAutoTurning
-                  ? 'bg-blue-50 dark:bg-blue-950/80 border-blue-500 text-blue-600 dark:text-cyan-400 font-bold'
-                  : 'bg-white dark:bg-white/5 border-neutral-300 dark:border-white/15 text-neutral-600 dark:text-neutral-400'
-              }`}
-            >
-              {isAutoTurning ? '● Auto-Rotating' : '○ Auto-Rotate'}
-            </button>
-          </div>
-
-          <div className="mt-3 text-xs font-mono text-neutral-500 dark:text-neutral-400">
-            Steps revolve in a circular orbit // Use buttons, arrow keys, or click any card
-          </div>
-
         </div>
       </div>
     </section>

@@ -28,23 +28,23 @@ export default function Expertise({ data = expertiseData }) {
   return (
     <section
       id="expertise"
-      className="relative w-full bg-[#faf9f5] dark:bg-[#050814] py-24 border-t border-neutral-200 dark:border-white/10 overflow-hidden transition-colors duration-200"
+      className="relative w-full bg-[#FAF6F0] dark:bg-[#140303] py-24 border-t border-[#A5A79B]/30 dark:border-[#590907]/40 overflow-hidden transition-colors duration-200"
       aria-label="Workshop Expertise"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="max-w-3xl mb-14 sm:mb-16">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/90 dark:bg-navy-900/90 backdrop-blur-md border border-neutral-200 dark:border-white/10 text-xs font-mono text-cyan-600 dark:text-cyan-400 uppercase tracking-widest mb-4 font-semibold shadow-sm">
-            <span className="w-2 h-2 rounded-full bg-cyan-500 animate-ping" />
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#E8D2B5]/30 dark:bg-[#590907]/40 backdrop-blur-md border border-[#590907]/20 dark:border-[#E8D2B5]/30 text-xs font-mono text-[#590907] dark:text-[#E8D2B5] uppercase tracking-widest mb-4 font-semibold shadow-xs">
+            <span className="w-2 h-2 rounded-full bg-[#590907] dark:bg-[#E8D2B5]" />
             <span>Section 07 // Curriculum Matrix</span>
           </div>
-          <h2 className="font-headline font-bold text-3xl sm:text-5xl md:text-6xl text-neutral-950 dark:text-white tracking-tight leading-tight">
+          <h2 className="font-headline font-bold text-3xl sm:text-5xl md:text-6xl text-neutral-950 dark:text-[#FAF6F0] tracking-tight leading-tight">
             Skills That Matter <br className="hidden sm:inline" />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-600 via-electric-600 to-accent-emerald dark:from-cyan-400 dark:via-electric-500 dark:to-accent-lime drop-shadow-sm">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#590907] via-[#851614] to-[#590907] dark:from-[#E8D2B5] dark:via-white dark:to-[#E8D2B5] drop-shadow-sm">
               Beyond the Classroom
             </span>
           </h2>
-          <p className="mt-4 text-sm sm:text-base text-neutral-600 dark:text-neutral-300 font-normal leading-relaxed">
+          <p className="mt-4 text-sm sm:text-base text-neutral-700 dark:text-neutral-300 font-normal leading-relaxed">
             15 specialized modules spanning frontier AI, systems engineering, cloud security, and career execution.
           </p>
         </div>
@@ -64,28 +64,28 @@ export default function Expertise({ data = expertiseData }) {
                 onClick={() => setActiveGroupId(grp.id)}
                 className={`relative group p-4 sm:p-5 rounded-2xl text-left border transition-all duration-300 flex flex-col justify-between min-h-[125px] cursor-pointer shadow-md overflow-hidden ${
                   isSelected
-                    ? 'border-cyan-400 shadow-glow-cyan text-white'
-                    : 'bg-white/90 dark:bg-[#0a0f24]/90 backdrop-blur-md text-neutral-900 dark:text-white border-neutral-200 dark:border-white/10 hover:border-cyan-500/50 hover:bg-neutral-50 dark:hover:bg-navy-850'
+                    ? 'border-[#590907] dark:border-[#E8D2B5] shadow-glow-burgundy dark:shadow-glow-cream text-white'
+                    : 'bg-white/90 dark:bg-[#200807]/90 backdrop-blur-md text-neutral-900 dark:text-[#FAF6F0] border-[#A5A79B]/30 dark:border-[#590907]/40 hover:border-[#590907] dark:hover:border-[#E8D2B5] hover:bg-neutral-50 dark:hover:bg-[#2a0b0a]'
                 }`}
               >
                 {/* Framer Motion Shared Layout Background for smooth tab pill sliding */}
                 {isSelected && (
                   <motion.div
                     layoutId="activeExpertiseHighlight"
-                    className="absolute inset-0 bg-gradient-to-r from-electric-600 to-cyan-500 z-0"
+                    className="absolute inset-0 bg-gradient-to-r from-[#590907] to-[#7a1210] dark:from-[#590907] dark:to-[#3a0605] z-0"
                     transition={{ type: "spring", bounce: 0.15, duration: 0.5 }}
                   />
                 )}
 
                 <div className="relative z-10 flex items-center justify-between text-xs font-mono w-full">
-                  <span className={`font-mono font-bold text-sm ${isSelected ? 'text-white' : 'text-cyan-600 dark:text-cyan-400'}`}>
+                  <span className={`font-mono font-bold text-sm ${isSelected ? 'text-[#E8D2B5]' : 'text-[#590907] dark:text-[#E8D2B5]'}`}>
                     {num}
                   </span>
-                  <GroupIcon className={`w-4 h-4 ${isSelected ? 'text-white stroke-[2.5]' : 'text-neutral-500 dark:text-neutral-400 group-hover:text-cyan-500'}`} />
+                  <GroupIcon className={`w-4 h-4 ${isSelected ? 'text-[#E8D2B5] stroke-[2.5]' : 'text-neutral-500 dark:text-neutral-400 group-hover:text-[#590907] dark:group-hover:text-[#E8D2B5]'}`} />
                 </div>
                 <div className="relative z-10 mt-3">
                   <span className={`font-headline font-bold text-sm leading-snug block ${
-                    isSelected ? 'text-white font-extrabold' : 'text-neutral-900 dark:text-neutral-100 group-hover:text-cyan-500'
+                    isSelected ? 'text-[#FAF6F0] font-extrabold' : 'text-neutral-900 dark:text-neutral-100 group-hover:text-[#590907] dark:group-hover:text-[#E8D2B5]'
                   }`}>
                     {label}
                   </span>
@@ -103,33 +103,33 @@ export default function Expertise({ data = expertiseData }) {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -15 }}
             transition={{ duration: 0.4 }}
-            className="p-8 sm:p-12 rounded-3xl bg-white/95 dark:bg-[#0a0f24]/95 backdrop-blur-xl border border-neutral-200 dark:border-white/10 shadow-2xl relative overflow-hidden"
+            className="p-8 sm:p-12 rounded-3xl bg-white/95 dark:bg-[#200807]/95 backdrop-blur-xl border border-[#A5A79B]/30 dark:border-[#590907]/40 shadow-2xl relative overflow-hidden"
           >
-            <div className="absolute top-0 right-0 w-80 h-80 bg-cyan-500/5 rounded-full blur-3xl pointer-events-none" />
+            <div className="absolute top-0 right-0 w-80 h-80 bg-[#590907]/10 dark:bg-[#E8D2B5]/10 rounded-full blur-3xl pointer-events-none" />
 
-            <div className="relative z-10 flex flex-col lg:flex-row lg:items-center justify-between gap-6 pb-8 border-b border-neutral-200 dark:border-white/10">
+            <div className="relative z-10 flex flex-col lg:flex-row lg:items-center justify-between gap-6 pb-8 border-b border-[#A5A79B]/30 dark:border-[#590907]/40">
               <div className="flex items-center gap-4">
-                <div className="w-14 h-14 rounded-2xl bg-neutral-100 dark:bg-navy-950 border border-neutral-200 dark:border-white/10 flex items-center justify-center text-cyan-600 dark:text-cyan-400 shadow-inner">
+                <div className="w-14 h-14 rounded-2xl bg-[#FAF6F0] dark:bg-[#140303] border border-[#A5A79B]/30 dark:border-[#590907]/40 flex items-center justify-center text-[#590907] dark:text-[#E8D2B5] shadow-inner">
                   <IconComponent className="w-7 h-7" />
                 </div>
                 <div>
-                  <span className="text-xs font-mono text-cyan-600 dark:text-cyan-400 uppercase tracking-wider block font-bold">
+                  <span className="text-xs font-mono text-[#590907] dark:text-[#E8D2B5] uppercase tracking-wider block font-bold">
                     Track {currentGroupNumber}
                   </span>
-                  <h3 className="font-headline font-bold text-2xl sm:text-3xl text-neutral-900 dark:text-white">
+                  <h3 className="font-headline font-bold text-2xl sm:text-3xl text-neutral-900 dark:text-[#FAF6F0]">
                     {currentCategoryName}
                   </h3>
                 </div>
               </div>
 
-              <p className="max-w-md text-xs sm:text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed font-body">
+              <p className="max-w-md text-xs sm:text-sm text-neutral-700 dark:text-neutral-300 leading-relaxed font-body">
                 {currentGroup?.description}
               </p>
             </div>
 
             {/* Topics Grid */}
             <div className="relative z-10 mt-8">
-              <span className="text-xs font-mono text-neutral-500 dark:text-cyan-400 uppercase tracking-widest block mb-4 font-semibold">
+              <span className="text-xs font-mono text-[#590907] dark:text-[#E8D2B5] uppercase tracking-widest block mb-4 font-semibold">
                 Core Modules &amp; Technical Focus:
               </span>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -139,11 +139,11 @@ export default function Expertise({ data = expertiseData }) {
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: i * 0.05, duration: 0.3 }}
-                    className="p-4 rounded-2xl bg-neutral-50 dark:bg-navy-950/80 border border-neutral-200 dark:border-white/5 flex items-start gap-3 hover:border-cyan-500/40 hover:-translate-y-0.5 transition-all shadow-xs"
+                    className="p-4 rounded-2xl bg-[#FAF6F0] dark:bg-[#140303]/80 border border-[#A5A79B]/30 dark:border-[#590907]/30 flex items-start gap-3 hover:border-[#590907] dark:hover:border-[#E8D2B5] hover:-translate-y-0.5 transition-all shadow-xs"
                   >
-                    <div className="w-2 h-2 rounded-full bg-cyan-500 mt-1.5 shrink-0" />
+                    <div className="w-2 h-2 rounded-full bg-[#590907] dark:bg-[#E8D2B5] mt-1.5 shrink-0" />
                     <div>
-                      <h5 className="font-headline font-semibold text-sm text-neutral-900 dark:text-neutral-100">
+                      <h5 className="font-headline font-semibold text-sm text-neutral-900 dark:text-[#FAF6F0]">
                         {topic}
                       </h5>
                       <span className="text-[10px] font-mono text-neutral-500 dark:text-neutral-400 mt-0.5 block">

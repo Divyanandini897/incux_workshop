@@ -13,6 +13,7 @@ const categoryImages = {
 export default function UpcomingWorkshopsSection({ onOpenPortal, onOpenAuth, currentUser }) {
   const [workshops, setWorkshops] = useState([]);
   const [activeCategory, setActiveCategory] = useState('All');
+  const scrollContainerRef = React.useRef(null);
 
   useEffect(() => {
     const load = async () => {
@@ -30,43 +31,89 @@ export default function UpcomingWorkshopsSection({ onOpenPortal, onOpenAuth, cur
     }
   };
 
+  const scroll = (direction) => {
+    if (scrollContainerRef.current) {
+      const scrollAmount = 380;
+      scrollContainerRef.current.scrollBy({
+        left: direction === 'left' ? -scrollAmount : scrollAmount,
+        behavior: 'smooth'
+      });
+    }
+  };
+
   const categories = ['All', 'Agentic AI', 'Generative AI', 'Cloud Security', 'Full Stack'];
 
   const filteredWorkshops = activeCategory === 'All'
     ? workshops
     : workshops.filter(ws => ws.category?.toLowerCase().includes(activeCategory.toLowerCase().split(' ')[0]));
 
+  const displayList = filteredWorkshops.length > 0 ? filteredWorkshops : workshops;
+
   return (
     <section
       id="upcoming-workshops"
-      className="relative w-full bg-[#faf9f5] dark:bg-navy-950 py-24 border-t border-neutral-200 dark:border-white/10 overflow-hidden transition-colors duration-200"
+      className="relative w-full bg-[#FAF6F0] dark:bg-[#140303] py-20 sm:py-24 border-t border-[#A5A79B]/30 dark:border-[#590907]/40 overflow-hidden transition-colors duration-200"
       aria-label="Upcoming Workshops and Registrations"
     >
       {/* Background ambient glow */}
-      <div className="absolute top-1/4 -left-32 w-80 h-80 rounded-full bg-electric-600/10 blur-[120px] pointer-events-none" />
-      <div className="absolute bottom-10 right-0 w-80 h-80 rounded-full bg-cyan-500/10 blur-[120px] pointer-events-none" />
+      <div className="absolute top-1/4 -left-32 w-80 h-80 rounded-full bg-[#590907]/15 dark:bg-[#590907]/25 blur-[120px] pointer-events-none" />
+      <div className="absolute bottom-10 right-0 w-80 h-80 rounded-full bg-[#E8D2B5]/20 dark:bg-[#E8D2B5]/10 blur-[120px] pointer-events-none" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Header (Original exact text preserved) */}
-        <div className="max-w-3xl mb-10 sm:mb-12">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/90 dark:bg-navy-900/90 backdrop-blur-md border border-neutral-200 dark:border-white/10 text-xs font-mono text-cyan-600 dark:text-cyan-400 uppercase tracking-widest mb-4 font-semibold shadow-sm">
-            <Sparkles className="w-3.5 h-3.5 text-cyan-500 animate-pulse" />
-            <span>Live Registration Portal</span>
+        {/* Section Header */}
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-8 sm:mb-10">
+          <div className="max-w-3xl">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/90 dark:bg-[#1c0707]/90 backdrop-blur-md border border-[#A5A79B]/40 dark:border-[#590907]/50 text-xs font-mono text-[#590907] dark:text-[#E8D2B5] uppercase tracking-widest mb-4 font-semibold shadow-sm">
+              <Sparkles className="w-3.5 h-3.5 text-[#590907] dark:text-[#E8D2B5]" />
+              <span>Upcoming Workshops // Open For Registration</span>
+            </div>
+            <h2 className="font-headline font-bold text-3xl sm:text-5xl md:text-6xl text-[#1C0707] dark:text-[#F7F1E6] tracking-tight leading-tight">
+              Upcoming Workshops &amp; <br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#590907] via-[#9e2320] to-[#A5A79B] dark:from-[#E8D2B5] dark:via-[#d4bea0] dark:to-[#A5A79B]">
+                Open For Registration
+              </span>
+            </h2>
+            <p className="mt-4 text-sm sm:text-base text-[#590907]/80 dark:text-[#E8D2B5]/85 font-normal leading-relaxed max-w-xl">
+              Workshop cohorts actively accepting candidate registrations. Scroll horizontally to explore all workshops.
+            </p>
           </div>
-          <h2 className="font-headline font-bold text-3xl sm:text-5xl md:text-6xl text-neutral-950 dark:text-white tracking-tight leading-tight">
-            Upcoming Workshops &amp; <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-600 via-electric-600 to-accent-emerald dark:from-cyan-400 dark:to-accent-lime">
-              Candidate Enrollment
-            </span>
-          </h2>
-          <p className="mt-4 text-sm sm:text-base text-neutral-600 dark:text-neutral-300 font-normal leading-relaxed max-w-xl">
-            Verified workshop cohorts actively accepting candidate registrations.
-            Colleges and universities can also request workshops tailored to their specific campus location.
-          </p>
+
+          {/* Scroll Navigation Buttons */}
+          <div className="flex items-center gap-2.5 shrink-0">
+            <button
+              onClick={() => scroll('left')}
+              aria-label="Scroll workshops left"
+              className="w-11 h-11 rounded-full bg-white dark:bg-[#200807] border border-[#A5A79B]/40 dark:border-[#590907]/50 flex items-center justify-center text-[#1C0707] dark:text-[#E8D2B5] hover:bg-[#590907] hover:text-[#E8D2B5] transition-all shadow-md cursor-pointer active:scale-95"
+            >
+              <ArrowRight className="w-5 h-5 rotate-180" />
+            </button>
+            <button
+              onClick={() => scroll('right')}
+              aria-label="Scroll workshops right"
+              className="w-11 h-11 rounded-full bg-[#590907] hover:bg-[#781210] text-[#E8D2B5] border border-[#590907] flex items-center justify-center transition-all shadow-md cursor-pointer active:scale-95"
+            >
+              <ArrowRight className="w-5 h-5" />
+            </button>
+          </div>
         </div>
 
-        {/* Category Filter Pills (Creative interactive addition) */}
-        <div className="flex items-center gap-2.5 sm:gap-3 overflow-x-auto pb-4 mb-8 sm:mb-10 no-scrollbar">
+        {/* Workshop Names Auto-Scrolling Ticker */}
+        {workshops.length > 0 && (
+          <div className="w-full overflow-hidden bg-white/70 dark:bg-[#200807]/70 backdrop-blur-md rounded-2xl border border-[#A5A79B]/30 dark:border-[#590907]/40 py-2.5 px-4 mb-8 select-none">
+            <div className="animate-marquee flex gap-8 whitespace-nowrap text-xs font-mono font-bold text-[#590907] dark:text-[#E8D2B5]">
+              {workshops.concat(workshops).map((w, i) => (
+                <span key={`${w.id || i}-${i}`} className="flex items-center gap-2">
+                  <span className="w-2 h-2 rounded-full bg-[#590907] dark:bg-[#E8D2B5]" />
+                  <span>{w.title}</span>
+                  <span className="text-[#A5A79B] font-normal">({w.dates})</span>
+                </span>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {/* Category Filter Pills */}
+        <div className="flex items-center gap-2.5 sm:gap-3 overflow-x-auto pb-4 mb-6 sm:mb-8 no-scrollbar">
           {categories.map((cat) => {
             const isActive = activeCategory === cat;
             return (
@@ -75,8 +122,8 @@ export default function UpcomingWorkshopsSection({ onOpenPortal, onOpenAuth, cur
                 onClick={() => setActiveCategory(cat)}
                 className={`px-5 py-2.5 rounded-full font-headline font-bold text-xs uppercase tracking-wider transition-all duration-200 whitespace-nowrap cursor-pointer ${
                   isActive
-                    ? 'bg-gradient-to-r from-electric-600 to-cyan-500 text-white shadow-glow-cyan shadow-md'
-                    : 'bg-white/90 dark:bg-navy-900/90 backdrop-blur-md text-neutral-700 dark:text-neutral-300 border border-neutral-300/80 dark:border-white/10 hover:border-cyan-500 dark:hover:border-cyan-400'
+                    ? 'bg-[#590907] text-[#E8D2B5] shadow-md shadow-[#590907]/30'
+                    : 'bg-white/90 dark:bg-[#200807]/90 backdrop-blur-md text-[#1C0707] dark:text-[#E8D2B5] border border-[#A5A79B]/40 dark:border-[#590907]/50 hover:border-[#590907] dark:hover:border-[#E8D2B5]'
                 }`}
               >
                 {cat}
@@ -85,9 +132,12 @@ export default function UpcomingWorkshopsSection({ onOpenPortal, onOpenAuth, cur
           })}
         </div>
 
-        {/* Live Workshop Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {(filteredWorkshops.length > 0 ? filteredWorkshops : workshops).map((ws, idx) => {
+        {/* Live Workshop Cards in a Fluid Horizontal Scroll Track */}
+        <div
+          ref={scrollContainerRef}
+          className="flex gap-6 overflow-x-auto no-scrollbar scroll-smooth pb-6 pt-2 snap-x snap-mandatory"
+        >
+          {displayList.map((ws, idx) => {
             const seatsLeft = Math.max(0, ws.seats - (ws.registered || 0));
             const percentFilled = Math.min(100, Math.round(((ws.registered || 0) / ws.seats) * 100));
             const thumbnail = categoryImages[ws.category] || categoryImages.default;
@@ -95,7 +145,7 @@ export default function UpcomingWorkshopsSection({ onOpenPortal, onOpenAuth, cur
             return (
               <div
                 key={ws.id || idx}
-                className="group rounded-3xl bg-white/95 dark:bg-navy-900/90 backdrop-blur-xl border border-neutral-200 dark:border-white/10 hover:border-cyan-500/60 dark:hover:border-cyan-400/60 hover:shadow-glow-cyan hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between overflow-hidden shadow-xl"
+                className="w-[300px] sm:w-[340px] lg:w-[360px] shrink-0 snap-start group rounded-3xl bg-white/95 dark:bg-[#1c0707]/95 backdrop-blur-xl border border-[#A5A79B]/30 dark:border-[#590907]/50 hover:border-[#590907] dark:hover:border-[#E8D2B5] hover:shadow-glow-burgundy hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between overflow-hidden shadow-xl"
               >
                 {/* Visual Header with LIVE Badge & Mode Pill */}
                 <div className="relative h-44 w-full overflow-hidden bg-neutral-900">
@@ -109,12 +159,12 @@ export default function UpcomingWorkshopsSection({ onOpenPortal, onOpenAuth, cur
                   {/* Top Status Badge */}
                   <div className="absolute top-3.5 left-3.5">
                     {seatsLeft > 0 ? (
-                      <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-red-600/95 text-white text-[10px] font-mono font-bold tracking-wider shadow-sm">
-                        <span className="w-1.5 h-1.5 rounded-full bg-white animate-ping" />
+                      <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#590907] text-[#E8D2B5] text-[10px] font-mono font-bold tracking-wider shadow-sm border border-[#E8D2B5]/30">
+                        <span className="w-1.5 h-1.5 rounded-full bg-[#E8D2B5]" />
                         LIVE COHORT
                       </span>
                     ) : (
-                      <span className="inline-flex items-center px-3 py-1 rounded-full bg-amber-500 text-neutral-950 text-[10px] font-mono font-bold tracking-wider shadow-sm">
+                      <span className="inline-flex items-center px-3 py-1 rounded-full bg-[#A5A79B] text-[#140303] text-[10px] font-mono font-bold tracking-wider shadow-sm">
                         FULL
                       </span>
                     )}
@@ -131,48 +181,48 @@ export default function UpcomingWorkshopsSection({ onOpenPortal, onOpenAuth, cur
                 {/* Card Body */}
                 <div className="p-6 flex-1 flex flex-col justify-between">
                   <div>
-                    <div className="flex items-center justify-between text-xs font-mono mb-2 text-neutral-500">
-                      <span className="px-2.5 py-0.5 rounded-full bg-neutral-100 dark:bg-navy-800 text-cyan-600 dark:text-cyan-300 font-bold text-[11px]">
+                    <div className="flex items-center justify-between text-xs font-mono mb-2 text-[#590907]/70 dark:text-[#E8D2B5]/70">
+                      <span className="px-2.5 py-0.5 rounded-full bg-[#FAF6F0] dark:bg-[#140303] text-[#590907] dark:text-[#E8D2B5] font-bold text-[11px] border border-[#A5A79B]/20 dark:border-[#590907]/30">
                         {ws.category}
                       </span>
-                      <span className="text-[11px] font-mono text-neutral-500 dark:text-neutral-400">
+                      <span className="text-[11px] font-mono text-[#590907]/70 dark:text-[#E8D2B5]/70">
                         {ws.mode}
                       </span>
                     </div>
 
-                    <h3 className="font-headline font-bold text-xl text-neutral-900 dark:text-white group-hover:text-cyan-600 dark:group-hover:text-cyan-400 transition-colors leading-snug">
+                    <h3 className="font-headline font-bold text-xl text-[#1C0707] dark:text-[#F7F1E6] group-hover:text-[#590907] dark:group-hover:text-[#E8D2B5] transition-colors leading-snug line-clamp-2">
                       {ws.title}
                     </h3>
 
-                    <div className="my-3.5 space-y-1.5 text-xs font-mono text-neutral-600 dark:text-neutral-300">
+                    <div className="my-3.5 space-y-1.5 text-xs font-mono text-[#590907]/80 dark:text-[#E8D2B5]/80">
                       <div className="flex items-center gap-2">
-                        <Calendar className="w-3.5 h-3.5 text-cyan-600 dark:text-cyan-400 flex-shrink-0" />
+                        <Calendar className="w-3.5 h-3.5 text-[#590907] dark:text-[#E8D2B5] flex-shrink-0" />
                         <span>{ws.dates}</span>
                       </div>
                       <div className="flex items-center gap-2">
-                        <MapPin className="w-3.5 h-3.5 text-accent-orange flex-shrink-0" />
+                        <MapPin className="w-3.5 h-3.5 text-[#A5A79B] flex-shrink-0" />
                         <span className="truncate">{ws.location}</span>
                       </div>
                     </div>
 
-                    <p className="text-xs text-neutral-600 dark:text-neutral-400 font-body line-clamp-2 leading-relaxed">
+                    <p className="text-xs text-[#590907]/70 dark:text-[#E8D2B5]/70 font-body line-clamp-2 leading-relaxed">
                       {ws.description}
                     </p>
                   </div>
 
                   {/* Capacity Bar & Quick Enroll Button */}
-                  <div className="mt-5 pt-4 border-t border-neutral-100 dark:border-white/10">
+                  <div className="mt-5 pt-4 border-t border-[#A5A79B]/20 dark:border-[#590907]/30">
                     {/* Capacity Progress Bar */}
                     <div className="mb-3">
                       <div className="flex items-center justify-between text-[11px] font-mono mb-1">
-                        <span className="text-neutral-500 dark:text-neutral-400">SEATS STATUS</span>
-                        <span className="font-bold text-neutral-900 dark:text-white">
+                        <span className="text-[#590907]/70 dark:text-[#E8D2B5]/70">SEATS STATUS</span>
+                        <span className="font-bold text-[#1C0707] dark:text-[#F7F1E6]">
                           {seatsLeft} / {ws.seats} left
                         </span>
                       </div>
-                      <div className="w-full h-1.5 bg-neutral-100 dark:bg-navy-950 rounded-full overflow-hidden">
+                      <div className="w-full h-1.5 bg-[#A5A79B]/20 dark:bg-[#140303] rounded-full overflow-hidden">
                         <div
-                          className="h-full bg-gradient-to-r from-electric-600 via-cyan-500 to-accent-lime rounded-full transition-all duration-500"
+                          className="h-full bg-gradient-to-r from-[#590907] via-[#781210] to-[#E8D2B5] rounded-full transition-all duration-500"
                           style={{ width: `${percentFilled}%` }}
                         />
                       </div>
@@ -180,7 +230,7 @@ export default function UpcomingWorkshopsSection({ onOpenPortal, onOpenAuth, cur
 
                     <button
                       onClick={() => handleAction(ws)}
-                      className="w-full py-2.5 rounded-xl bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-500 hover:to-cyan-400 text-white font-headline font-bold text-xs uppercase tracking-wider shadow-md shadow-blue-500/20 hover:shadow-cyan-500/30 transition-all flex items-center justify-center gap-1.5 cursor-pointer active:scale-98"
+                      className="w-full py-2.5 rounded-xl bg-[#590907] hover:bg-[#781210] text-[#E8D2B5] font-headline font-bold text-xs uppercase tracking-wider shadow-md shadow-[#590907]/30 transition-all flex items-center justify-center gap-1.5 cursor-pointer active:scale-98"
                     >
                       <span>Enroll in Cohort</span>
                       <ArrowRight className="w-3.5 h-3.5" />
@@ -190,35 +240,6 @@ export default function UpcomingWorkshopsSection({ onOpenPortal, onOpenAuth, cur
               </div>
             );
           })}
-        </div>
-
-        {/* Campus Location Collaboration Card */}
-        <div className="mt-12 sm:mt-16 p-8 rounded-3xl bg-gradient-to-r from-electric-600/10 via-cyan-500/15 to-violet-600/10 dark:from-navy-900/90 dark:via-navy-850/90 dark:to-navy-900/90 backdrop-blur-xl border border-cyan-500/30 dark:border-cyan-500/30 flex flex-col sm:flex-row items-center justify-between gap-6 shadow-xl">
-          <div className="max-w-2xl">
-            <span className="text-[10px] font-mono uppercase tracking-widest text-cyan-600 dark:text-cyan-400 font-bold block mb-1">
-              CAMPUS &amp; COLLEGE COLLABORATIONS
-            </span>
-            <h3 className="font-headline font-bold text-xl sm:text-2xl text-neutral-900 dark:text-white">
-              Want These Workshops Conducted at Your College?
-            </h3>
-            <p className="text-xs sm:text-sm text-neutral-600 dark:text-neutral-300 mt-2 leading-relaxed">
-              Academic deans, faculty coordinators, and student tech clubs can request tailored workshops at their campus location.
-              Our Admin team reviews requirements and approves scheduling within 24 hours.
-            </p>
-          </div>
-
-          <button
-            onClick={() => {
-              if (!currentUser) {
-                onOpenAuth('candidate');
-              } else {
-                onOpenPortal();
-              }
-            }}
-            className="px-7 py-3.5 rounded-full bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-500 hover:to-cyan-400 text-white font-headline font-bold text-xs uppercase tracking-wider shadow-lg shadow-blue-500/25 hover:shadow-cyan-500/35 transition-all active:scale-95 shrink-0 cursor-pointer"
-          >
-            Request Campus Workshop
-          </button>
         </div>
       </div>
     </section>

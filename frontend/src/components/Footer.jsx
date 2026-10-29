@@ -47,15 +47,16 @@ export default function Footer() {
 
   return (
     <footer
-      className="relative w-full bg-[#fbf9f5] dark:bg-navy-950 text-neutral-800 dark:text-neutral-300 pt-20 pb-12 border-t border-neutral-200 dark:border-white/10 overflow-hidden select-none transition-colors duration-200"
+      id="contact"
+      className="relative w-full bg-[#FAF6F0] dark:bg-[#140303] text-neutral-800 dark:text-neutral-300 pt-20 pb-12 border-t border-[#A5A79B]/30 dark:border-[#590907]/40 overflow-hidden select-none transition-colors duration-200"
       aria-label="Footer"
     >
       {/* 
         Giant Oversized Background Watermark "incuxai"
-        Directly inspired by the user's reference image (glowlogics style in light & dark modes)
+        Directly inspired by the user's reference image in light & dark modes
       */}
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none overflow-hidden z-0">
-        <span className="font-headline font-black text-[22vw] tracking-tighter text-blue-600/[0.12] dark:text-blue-500/[0.15] lowercase whitespace-nowrap select-none drop-shadow-sm">
+        <span className="font-headline font-black text-[22vw] tracking-tighter text-[#590907]/[0.07] dark:text-[#E8D2B5]/[0.08] lowercase whitespace-nowrap select-none drop-shadow-sm">
           incuxai
         </span>
       </div>
@@ -65,27 +66,27 @@ export default function Footer() {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 sm:gap-10 pb-16">
           {/* Column 1: Our Products / Workshops */}
           <div>
-            <h4 className="font-headline font-bold text-sm sm:text-base text-neutral-900 dark:text-white tracking-tight mb-4">
+            <h4 className="font-headline font-bold text-sm sm:text-base text-[#590907] dark:text-[#E8D2B5] tracking-tight mb-4 uppercase font-mono">
               Our Products
             </h4>
-            <ul className="space-y-2.5 text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 font-body">
+            <ul className="space-y-2.5 text-xs sm:text-sm text-neutral-700 dark:text-neutral-300 font-body">
               <li>
-                <a href="#our-work" className="hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors">
+                <a href="#our-work" className="hover:text-[#590907] dark:hover:text-[#E8D2B5] transition-colors">
                   Learning Programs
                 </a>
               </li>
               <li>
-                <a href="#our-work" className="hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors">
+                <a href="#our-work" className="hover:text-[#590907] dark:hover:text-[#E8D2B5] transition-colors">
                   Workshops
                 </a>
               </li>
               <li>
-                <a href="#featured" className="hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors">
+                <a href="#featured" className="hover:text-[#590907] dark:hover:text-[#E8D2B5] transition-colors">
                   Hackathons
                 </a>
               </li>
               <li>
-                <a href="#expertise" className="hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors">
+                <a href="#expertise" className="hover:text-[#590907] dark:hover:text-[#E8D2B5] transition-colors">
                   Certifications
                 </a>
               </li>
@@ -94,30 +95,30 @@ export default function Footer() {
 
           {/* Column 2: Our Company */}
           <div>
-            <h4 className="font-headline font-bold text-sm sm:text-base text-neutral-900 dark:text-white tracking-tight mb-4">
+            <h4 className="font-headline font-bold text-sm sm:text-base text-[#590907] dark:text-[#E8D2B5] tracking-tight mb-4 uppercase font-mono">
               Our Company
             </h4>
-            <ul className="space-y-2.5 text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 font-body">
+            <ul className="space-y-2.5 text-xs sm:text-sm text-neutral-700 dark:text-neutral-300 font-body">
               <li>
-                <a href="#about" className="hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors">
+                <a href="#about" className="hover:text-[#590907] dark:hover:text-[#E8D2B5] transition-colors">
                   About Us
                 </a>
               </li>
               <li>
-                <a href="#how-we-work" className="hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors">
+                <a href="#how-we-work" className="hover:text-[#590907] dark:hover:text-[#E8D2B5] transition-colors">
                   Careers
                 </a>
               </li>
               <li>
-                <a href="#featured" className="hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors">
+                <a href="#featured" className="hover:text-[#590907] dark:hover:text-[#E8D2B5] transition-colors">
                   Event Hub
                 </a>
               </li>
               <li className="flex items-center gap-2">
-                <a href="#news" className="hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors">
+                <a href="#news" className="hover:text-[#590907] dark:hover:text-[#E8D2B5] transition-colors">
                   IncuxAI Blog
                 </a>
-                <span className="px-1.5 py-0.5 rounded-full bg-cyan-500/10 text-cyan-600 dark:text-cyan-400 text-[10px] font-mono font-semibold">
+                <span className="px-1.5 py-0.5 rounded-full bg-[#E8D2B5]/30 text-[#590907] dark:bg-[#590907]/40 dark:text-[#E8D2B5] text-[10px] font-mono font-semibold">
                   New
                 </span>
               </li>
@@ -126,27 +127,27 @@ export default function Footer() {
 
           {/* Column 3: Help Resources */}
           <div>
-            <h4 className="font-headline font-bold text-sm sm:text-base text-neutral-900 dark:text-white tracking-tight mb-4">
+            <h4 className="font-headline font-bold text-sm sm:text-base text-[#590907] dark:text-[#E8D2B5] tracking-tight mb-4 uppercase font-mono">
               Help Resources
             </h4>
-            <ul className="space-y-2.5 text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 font-body">
+            <ul className="space-y-2.5 text-xs sm:text-sm text-neutral-700 dark:text-neutral-300 font-body">
               <li>
-                <a href="#contact" className="hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors">
+                <a href="#contact" className="hover:text-[#590907] dark:hover:text-[#E8D2B5] transition-colors">
                   FAQ
                 </a>
               </li>
               <li>
-                <a href="#contact" className="hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors">
+                <a href="#contact" className="hover:text-[#590907] dark:hover:text-[#E8D2B5] transition-colors">
                   Support
                 </a>
               </li>
               <li>
-                <a href="#news" className="hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors">
+                <a href="#news" className="hover:text-[#590907] dark:hover:text-[#E8D2B5] transition-colors">
                   Privacy Policy
                 </a>
               </li>
               <li>
-                <a href="#how-we-work" className="hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors">
+                <a href="#how-we-work" className="hover:text-[#590907] dark:hover:text-[#E8D2B5] transition-colors">
                   Terms of Use
                 </a>
               </li>
@@ -155,7 +156,7 @@ export default function Footer() {
 
           {/* Column 4: Connect with Us */}
           <div>
-            <h4 className="font-headline font-bold text-sm sm:text-base text-neutral-900 dark:text-white tracking-tight mb-4">
+            <h4 className="font-headline font-bold text-sm sm:text-base text-[#590907] dark:text-[#E8D2B5] tracking-tight mb-4 uppercase font-mono">
               Connect with Us
             </h4>
 
@@ -166,7 +167,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noreferrer"
                 aria-label="Instagram"
-                className="w-8 h-8 rounded-xl bg-white dark:bg-navy-900 border border-neutral-300 dark:border-white/10 flex items-center justify-center text-neutral-700 dark:text-neutral-300 hover:text-cyan-600 dark:hover:text-cyan-400 hover:border-cyan-500 dark:hover:border-cyan-400 transition-all shadow-sm"
+                className="w-8 h-8 rounded-xl bg-white dark:bg-[#200807] border border-[#A5A79B]/30 dark:border-[#590907]/40 flex items-center justify-center text-neutral-700 dark:text-[#FAF6F0] hover:text-[#590907] dark:hover:text-[#E8D2B5] hover:border-[#590907] dark:hover:border-[#E8D2B5] transition-all shadow-sm"
               >
                 <InstagramIcon className="w-4 h-4" />
               </a>
@@ -175,7 +176,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noreferrer"
                 aria-label="LinkedIn"
-                className="w-8 h-8 rounded-xl bg-white dark:bg-navy-900 border border-neutral-300 dark:border-white/10 flex items-center justify-center text-neutral-700 dark:text-neutral-300 hover:text-cyan-600 dark:hover:text-cyan-400 hover:border-cyan-500 dark:hover:border-cyan-400 transition-all shadow-sm"
+                className="w-8 h-8 rounded-xl bg-white dark:bg-[#200807] border border-[#A5A79B]/30 dark:border-[#590907]/40 flex items-center justify-center text-neutral-700 dark:text-[#FAF6F0] hover:text-[#590907] dark:hover:text-[#E8D2B5] hover:border-[#590907] dark:hover:border-[#E8D2B5] transition-all shadow-sm"
               >
                 <LinkedinIcon className="w-4 h-4" />
               </a>
@@ -184,7 +185,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noreferrer"
                 aria-label="Facebook"
-                className="w-8 h-8 rounded-xl bg-white dark:bg-navy-900 border border-neutral-300 dark:border-white/10 flex items-center justify-center text-neutral-700 dark:text-neutral-300 hover:text-cyan-600 dark:hover:text-cyan-400 hover:border-cyan-500 dark:hover:border-cyan-400 transition-all shadow-sm"
+                className="w-8 h-8 rounded-xl bg-white dark:bg-[#200807] border border-[#A5A79B]/30 dark:border-[#590907]/40 flex items-center justify-center text-neutral-700 dark:text-[#FAF6F0] hover:text-[#590907] dark:hover:text-[#E8D2B5] hover:border-[#590907] dark:hover:border-[#E8D2B5] transition-all shadow-sm"
               >
                 <FacebookIcon className="w-4 h-4" />
               </a>
@@ -193,25 +194,25 @@ export default function Footer() {
                 target="_blank"
                 rel="noreferrer"
                 aria-label="WhatsApp"
-                className="w-8 h-8 rounded-xl bg-white dark:bg-navy-900 border border-neutral-300 dark:border-white/10 flex items-center justify-center text-neutral-700 dark:text-neutral-300 hover:text-cyan-600 dark:hover:text-cyan-400 hover:border-cyan-500 dark:hover:border-cyan-400 transition-all shadow-sm"
+                className="w-8 h-8 rounded-xl bg-white dark:bg-[#200807] border border-[#A5A79B]/30 dark:border-[#590907]/40 flex items-center justify-center text-neutral-700 dark:text-[#FAF6F0] hover:text-[#590907] dark:hover:text-[#E8D2B5] hover:border-[#590907] dark:hover:border-[#E8D2B5] transition-all shadow-sm"
               >
                 <WhatsAppIcon className="w-4 h-4" />
               </a>
             </div>
 
-            {/* Address & Verified Contact Channels */}
-            <div className="space-y-2 text-xs text-neutral-600 dark:text-neutral-400 font-body leading-relaxed">
+            {/* Address & Official Contact Channels */}
+            <div className="space-y-2 text-xs text-neutral-700 dark:text-neutral-300 font-body leading-relaxed">
               <p>
-                <strong className="text-neutral-900 dark:text-white block font-mono text-[11px] mb-0.5">Contact:</strong>
-                <a href="mailto:info@incuxai.com" className="text-neutral-800 dark:text-neutral-300 hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors block font-medium">
+                <strong className="text-neutral-900 dark:text-[#FAF6F0] block font-mono text-[11px] mb-0.5">Contact:</strong>
+                <a href="mailto:info@incuxai.com" className="text-neutral-800 dark:text-neutral-300 hover:text-[#590907] dark:hover:text-[#E8D2B5] transition-colors block font-medium">
                   info@incuxai.com
                 </a>
-                <a href="tel:7665061289" className="text-neutral-800 dark:text-neutral-300 hover:text-orange-600 dark:hover:text-accent-orange transition-colors block mt-0.5 font-medium">
+                <a href="tel:7665061289" className="text-neutral-800 dark:text-neutral-300 hover:text-[#590907] dark:hover:text-[#E8D2B5] transition-colors block mt-0.5 font-medium">
                   +91 7665061289
                 </a>
               </p>
-              <p className="pt-1.5 border-t border-neutral-200 dark:border-white/10">
-                <strong className="text-neutral-900 dark:text-white block font-mono text-[11px] mb-0.5">Address:</strong>
+              <p className="pt-1.5 border-t border-[#A5A79B]/30 dark:border-[#590907]/30">
+                <strong className="text-neutral-900 dark:text-[#FAF6F0] block font-mono text-[11px] mb-0.5">Address:</strong>
                 Building No: 148, 2nd Floor, Outer Ring Rd, Regional Tech Corridor, Hyderabad, Telangana &amp; Andhra Pradesh 500081
               </p>
             </div>
@@ -219,21 +220,21 @@ export default function Footer() {
         </div>
 
         {/* Bottom Horizontal Line & Copyright Bar */}
-        <div className="pt-8 border-t border-neutral-200 dark:border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-body text-neutral-500 dark:text-neutral-400">
+        <div className="pt-8 border-t border-[#A5A79B]/30 dark:border-[#590907]/40 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-body text-neutral-600 dark:text-neutral-400">
           <div>
             © 2026 IncuxAI. All rights reserved.
           </div>
 
           <div className="flex items-center gap-6">
-            <a href="#how-we-work" className="hover:text-neutral-900 dark:hover:text-white transition-colors">
+            <a href="#how-we-work" className="hover:text-[#590907] dark:hover:text-[#E8D2B5] transition-colors">
               Terms of Use
             </a>
-            <a href="#news" className="hover:text-neutral-900 dark:hover:text-white transition-colors">
+            <a href="#news" className="hover:text-[#590907] dark:hover:text-[#E8D2B5] transition-colors">
               Privacy Policy
             </a>
             <button
               onClick={scrollToTop}
-              className="flex items-center gap-1.5 hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors ml-2 cursor-pointer font-medium"
+              className="flex items-center gap-1.5 hover:text-[#590907] dark:hover:text-[#E8D2B5] transition-colors ml-2 cursor-pointer font-medium"
               aria-label="Back to top of page"
             >
               <span>Back to top</span>

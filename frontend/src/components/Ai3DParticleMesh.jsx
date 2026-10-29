@@ -47,11 +47,11 @@ export default function Ai3DParticleMesh({ className = "" }) {
     const PARTICLE_COUNT = 750;
     const particles = [];
     const colors = [
-      { r: 6, g: 182, b: 212 },   // Cyber Cyan
-      { r: 245, g: 158, b: 11 },  // Warm Amber / Gold (Ref 1)
-      { r: 59, g: 130, b: 246 },  // Electric Blue
-      { r: 204, g: 255, b: 0 },   // Accent Lime
-      { r: 255, g: 255, b: 255 }  // Pure White core
+      { r: 89, g: 9, b: 7 },       // Deep Burgundy (#590907)
+      { r: 232, g: 210, b: 181 },  // Warm Cream Beige (#E8D2B5)
+      { r: 165, g: 167, b: 155 },  // Muted Sage Grey (#A5A79B)
+      { r: 158, g: 35, b: 32 },    // Rich Burgundy Highlight
+      { r: 250, g: 246, b: 240 }   // Soft Cream core
     ];
 
     const baseRadius = Math.min(width, height) * 0.38;
@@ -173,8 +173,8 @@ export default function Ai3DParticleMesh({ className = "" }) {
           const dist = Math.sqrt(dx * dx + dy * dy);
 
           if (dist < connectDist) {
-            const lineAlpha = (1 - dist / connectDist) * 0.18 * projected[i].alpha;
-            ctx.strokeStyle = `rgba(6, 182, 212, ${lineAlpha})`;
+            const lineAlpha = (1 - dist / connectDist) * 0.22 * projected[i].alpha;
+            ctx.strokeStyle = `rgba(232, 210, 181, ${lineAlpha})`;
             ctx.beginPath();
             ctx.moveTo(projected[i].x, projected[i].y);
             ctx.lineTo(projected[j].x, projected[j].y);

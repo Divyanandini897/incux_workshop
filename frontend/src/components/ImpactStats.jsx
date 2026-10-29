@@ -99,43 +99,43 @@ function SwipeableCounterCard({ stat, index, activeHoveredIndex, setActiveHovere
       className="cursor-grab active:cursor-grabbing select-none h-full"
     >
       <div
-        className={`impact-card flex flex-col justify-between p-8 rounded-3xl bg-white dark:bg-[#0c1228] border transition-all duration-300 shadow-xl group relative overflow-hidden h-full min-h-[230px] ${
+        className={`impact-card flex flex-col justify-between p-8 rounded-3xl bg-white dark:bg-[#200807] border transition-all duration-300 shadow-xl group relative overflow-hidden h-full min-h-[230px] ${
           isHovered
-            ? 'border-blue-500/80 dark:border-cyan-400 shadow-glow-cyan shadow-2xl'
-            : 'border-neutral-300 dark:border-white/20'
+            ? 'border-[#590907] dark:border-[#E8D2B5] shadow-glow-burgundy shadow-2xl'
+            : 'border-[#A5A79B]/30 dark:border-[#590907]/50'
         }`}
       >
         {/* Glow orb following swipe */}
-        <div className="absolute top-0 right-0 w-36 h-36 bg-blue-500/10 dark:bg-cyan-500/10 rounded-full blur-2xl pointer-events-none group-hover:scale-125 transition-transform" />
+        <div className="absolute top-0 right-0 w-36 h-36 bg-[#590907]/10 dark:bg-[#E8D2B5]/10 rounded-full blur-2xl pointer-events-none group-hover:scale-125 transition-transform" />
 
         <div className="relative z-10">
           <div className="flex items-center justify-between mb-4">
-            <span className="text-xs font-mono uppercase tracking-widest text-blue-700 dark:text-cyan-300 block font-bold flex items-center gap-1.5 bg-blue-50 dark:bg-blue-950/80 px-2.5 py-1 rounded-md border border-blue-400/30">
-              <span className="w-2 h-2 rounded-full bg-blue-500 dark:bg-cyan-400 animate-pulse" />
-              VERIFIED OUTCOME
+            <span className="text-xs font-mono uppercase tracking-widest text-[#590907] dark:text-[#E8D2B5] block font-bold flex items-center gap-1.5 bg-[#FAF6F0] dark:bg-[#140303] px-2.5 py-1 rounded-md border border-[#A5A79B]/30 dark:border-[#590907]/40">
+              <span className="w-2 h-2 rounded-full bg-[#590907] dark:bg-[#E8D2B5]" />
+              PROGRAM OUTCOME
             </span>
-            <Activity className="w-4 h-4 text-blue-600 dark:text-cyan-400 opacity-80 group-hover:opacity-100 transition-opacity" />
+            <Activity className="w-4 h-4 text-[#590907] dark:text-[#E8D2B5] opacity-80 group-hover:opacity-100 transition-opacity" />
           </div>
 
-          <div className="font-headline font-extrabold text-5xl sm:text-6xl text-neutral-950 dark:text-white tracking-tight flex items-baseline">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-neutral-950 via-blue-700 to-cyan-600 dark:from-white dark:via-cyan-300 dark:to-blue-400">
+          <div className="font-headline font-extrabold text-5xl sm:text-6xl text-[#1C0707] dark:text-[#F7F1E6] tracking-tight flex items-baseline">
+            <span>
               {currentValue}
             </span>
-            <span className="text-amber-500 font-mono ml-1 text-4xl font-bold">{stat.suffix}</span>
+            <span className="text-[#590907] dark:text-[#E8D2B5] font-mono ml-1 text-4xl font-bold">{stat.suffix}</span>
           </div>
         </div>
 
-        <div className="relative z-10 mt-8 pt-5 border-t border-neutral-200 dark:border-white/10">
-          <h4 className="font-headline font-bold text-xl text-neutral-950 dark:text-white leading-snug group-hover:text-blue-600 dark:group-hover:text-cyan-400 transition-colors">
+        <div className="relative z-10 mt-8 pt-5 border-t border-[#A5A79B]/20 dark:border-[#590907]/30">
+          <h4 className="font-headline font-bold text-xl text-[#1C0707] dark:text-[#F7F1E6] leading-snug group-hover:text-[#590907] dark:group-hover:text-[#E8D2B5] transition-colors">
             {stat.label}
           </h4>
-          <p className="text-sm text-neutral-700 dark:text-neutral-300 mt-1.5 leading-relaxed font-body font-medium">
+          <p className="text-sm text-[#590907]/75 dark:text-[#E8D2B5]/75 mt-1.5 leading-relaxed font-body font-medium">
             {stat.caption}
           </p>
         </div>
 
         {/* Dynamic Swipe Indicator Cue on Hover */}
-        <div className="absolute bottom-2 right-4 text-[10px] font-mono text-blue-600 dark:text-cyan-400/80 opacity-0 group-hover:opacity-100 transition-opacity flex items-center gap-1">
+        <div className="absolute bottom-2 right-4 text-[10px] font-mono text-[#590907] dark:text-[#E8D2B5]/80 opacity-0 group-hover:opacity-100 transition-opacity flex items-center gap-1">
           <MoveHorizontal className="w-3 h-3" />
           <span>Swipeable</span>
         </div>
@@ -152,7 +152,6 @@ export default function ImpactStats({ data = impactStatsData }) {
     const section = sectionRef.current;
     if (!section) return;
 
-    // Use gentle entrance that clears props so elements are NEVER left stuck hidden
     const ctx = gsap.context(() => {
       gsap.fromTo(
         ".impact-card",
@@ -180,24 +179,24 @@ export default function ImpactStats({ data = impactStatsData }) {
     <section
       id="impact"
       ref={sectionRef}
-      className="relative w-full bg-[#f8f7f2] dark:bg-[#070b1a] py-24 sm:py-32 border-t border-neutral-300 dark:border-white/15 overflow-hidden transition-colors duration-200"
+      className="relative w-full bg-[#FAF6F0] dark:bg-[#140303] py-24 sm:py-32 border-t border-[#A5A79B]/30 dark:border-[#590907]/40 overflow-hidden transition-colors duration-200"
       aria-label="Our Impact"
     >
       {/* Background ambient orbs */}
-      <div className="absolute top-1/2 left-1/4 w-96 h-96 rounded-full bg-blue-600/10 dark:bg-blue-500/15 blur-[140px] pointer-events-none" />
-      <div className="absolute bottom-10 right-10 w-96 h-96 rounded-full bg-cyan-500/10 dark:bg-cyan-500/15 blur-[140px] pointer-events-none" />
+      <div className="absolute top-1/2 left-1/4 w-96 h-96 rounded-full bg-[#590907]/15 dark:bg-[#590907]/25 blur-[140px] pointer-events-none" />
+      <div className="absolute bottom-10 right-10 w-96 h-96 rounded-full bg-[#E8D2B5]/20 dark:bg-[#E8D2B5]/10 blur-[140px] pointer-events-none" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="max-w-3xl mb-14 sm:mb-16">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50 dark:bg-blue-950/80 border border-blue-400/40 text-xs font-mono text-blue-700 dark:text-cyan-300 uppercase tracking-widest mb-4 font-bold shadow-xs">
-            <Sparkles className="w-3.5 h-3.5 text-blue-600 dark:text-cyan-400" />
-            <span>Section 05 // Verified Reach</span>
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/90 dark:bg-[#200807]/90 border border-[#A5A79B]/40 dark:border-[#590907]/50 text-xs font-mono text-[#590907] dark:text-[#E8D2B5] uppercase tracking-widest mb-4 font-bold shadow-xs">
+            <Sparkles className="w-3.5 h-3.5 text-[#590907] dark:text-[#E8D2B5]" />
+            <span>Section 05 // Student Reach</span>
           </div>
-          <h2 className="font-headline font-extrabold text-4xl sm:text-5xl md:text-6xl text-neutral-950 dark:text-white tracking-tight leading-tight">
+          <h2 className="font-headline font-extrabold text-4xl sm:text-5xl md:text-6xl text-[#1C0707] dark:text-[#F7F1E6] tracking-tight leading-tight">
             {data.headline}
           </h2>
-          <p className="mt-4 text-base sm:text-xl text-neutral-700 dark:text-neutral-200 font-medium leading-relaxed">
+          <p className="mt-4 text-base sm:text-xl text-[#590907]/80 dark:text-[#E8D2B5]/85 font-medium leading-relaxed">
             {data.subtitle}
           </p>
         </div>
